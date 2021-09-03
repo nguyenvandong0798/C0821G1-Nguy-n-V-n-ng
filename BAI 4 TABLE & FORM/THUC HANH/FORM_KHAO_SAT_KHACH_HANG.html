@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>MARKET RESEARCH SURVEY</title>
+    <style>
+        .table{
+            border-collapse: collapse;
+            border: black;
+            border: 1px;
+        }
+        .gay{
+            background-color: lightgray;
+        }
+    </style>
 </head>
 <body>
     <form name="Abc" action="Google" method="post">
@@ -105,7 +115,6 @@
                 <td> Cents </td>
             </tr>
         </table>
-        </tr>
             <tr>
                 <td> <h4> What features would you like to see in the new product.</h4></td>
             </tr>
@@ -115,8 +124,55 @@
                     <textarea rows="5Px" cols="205px" ></textarea>
                 </td>
             </tr>
-
         </table>
+            <tr>
+                <td> <P> What features would you like to see in the new product.</P></td>
+            </tr>
+        <table class="table" border="1px">
+            <tr>
+                <th class="gay"> </th>
+                <th class="gay"> Strongly Disagree </th>
+                <th class="gay"> Disagree </th>
+                <th class="gay"> Agree </th>
+            </tr>
+            <tr>
+                <td><h4> Our products are priced fairly. </h4></td>
+                <td style="text-align: center"><input type="radio">
+                     <p style="text-align: center"> 1 </p>
+                </td>
+                <td style="text-align: center"><input type="radio">
+                    <p> 2 </p>
+                </td>
+                <td style="text-align: center"><input type="radio">
+                    <p style="text-align: center"> 3 </p>
+                </td>
+            </tr>
+        <tr>
+            <td  class="gay"style="text-align: left"><h4> Our products are high qualty. </h4></td>
+            <td class="gay" style="text-align: center"><input type="radio">
+                <p class="gay" style="text-align: center"> 1 </p>
+            </td>
+            <td class="gay" style="text-align: center"><input type="radio">
+                <p class="gay" style="text-align: center"> 2 </p>
+            </td>
+            <td class="gay" style="text-align: center"><input type="radio">
+                <p class="gay" style="text-align: center"> 3 </p>
+            </td>
+        </tr>
+        <tr style="text-align: Center">
+            <td><h4> You woudl recommend our produc to a friend or coworker. </h4></td>
+            <td style="text-align: center"><input type="radio">
+                <p style="text-align: center"> 1 </p>
+            </td>
+            <td style="text-align: center"><input type="radio">
+                <p style="text-align: center"> 2 </p>
+            </td>
+            <td style="text-align: center"><input type="radio">
+                <p style="text-align: center"> 3 </p>
+            </td>
+        </tr>
+        </table>
+        <input type="submit" name="Submit" value="Submit">
     </form>
 </body>
 </html>
