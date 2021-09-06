@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính điểm trung bình</title>
+</head>
+<body>
+    <script>
+        {
+            let vatLy;
+            let hoaHoc;
+            let sinhHoc;
+            let so3;
+            vatLy = prompt("enter điểm vật lý");
+            hoaHoc = prompt("enter điểm hoá học");
+            sinhHoc = prompt("enter điểm sinh học");
+            so3 = prompt("enter chia 3");
+            let diemvatLy = parseInt(vatLy);
+            let diemhoaHoc = parseInt(hoaHoc);
+            let diemsinhHoc = parseInt(sinhHoc);
+            let trungBinh = ( diemvatLy + diemhoaHoc + diemsinhHoc ) / 3;
+            document.write("Điểm trung bình là: " + trungBinh);
+        }
+    </script>
+</body>
+</html>
