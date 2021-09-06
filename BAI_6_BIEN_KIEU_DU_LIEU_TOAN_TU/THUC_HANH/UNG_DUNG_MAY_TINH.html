@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<p></p>
+<input type="text" id="so">
+<p></p>
+<input type="text" id="so1">
+
+<br>
+<button type="button" onclick="addition()">Addition(+)</button>
+<button type="button" onclick="Subtraction()">Subtraction(-)</button>
+<button type="button" onclick="Mutiplication()">Mutiplication(*)</button>
+<button type="button" onclick="Division()">Division(/)</button>
+<p> Resul Addition: <span id="result"> </span> </p>
+</body>
+<script>
+    function addition() {
+        let a1 = parseInt(document.getElementById('so').value);
+        let a2 = parseInt(document.getElementById('so1').value);
+        ad = a1 + a2;
+    }
+        document.getElementById('result').innerHTML = ad;
+    function Subtraction() {
+        let a3 = parseInt(document.getElementById('so').value);
+        let a4 = parseInt(document.getElementById('so1').value);
+        ad = a3 - a4;
+        document.getElementById('result').innerHTML = ad;
+    }
+    function Mutiplication() {
+        let a5 = parseInt(document.getElementById('so').value);
+        let a6 = parseInt(document.getElementById('so1').value);
+        ad = a5 * a6;
+        document.getElementById('result').innerHTML = ad;
+    }
+    function Division() {
+        let a7 = parseInt(document.getElementById('so').value);
+        let a8 = parseInt(document.getElementById('so1').value);
+        ad = a7 / a8;
+        document.getElementById('result').innerHTML = ad;
+    }
+
+</script>
+</html>
