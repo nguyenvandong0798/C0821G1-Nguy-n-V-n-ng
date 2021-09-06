@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tền tệ</title>
+</head>
+<body>
+    <p> amount </p>
+    <input type="text" id="so">
+
+    <p>From Currency</p>
+    <select id="from">
+        <option value="VND"> Viet Nam </option>
+        <option value="USD"> USD </option>
+    </select>
+    <p> To Currency </p>
+    <select id="to">
+        <option value="USD"> USD </option>
+        <option value="VND"> Viet Nam </option>
+    </select>
+    <br>
+    <button onclick="convert()"> Chuyen doi</button>
+</body>
+<script>
+    function convert() {
+        let amount = document.getElementById('so').value;
+        let from = document.getElementById('from').value;
+        let to = document.getElementById('to').value;
+        let result;
+
+        if (from === "VND" && to === "USD") {
+            result = amount / 23000;
+        } else if (from === "USD" && to === "VND") {
+            result = amount * 23000;
+        }
+        else {
+            result = amount;
+        }
+        alert("so tien là: " + result);
+
+    }
+</script>
+</html>
