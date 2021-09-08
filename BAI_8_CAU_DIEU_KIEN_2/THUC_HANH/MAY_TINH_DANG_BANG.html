@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .color{
+            background-color: lightgray;
+        }
+        td{
+            color: blue;
+            font-size: large;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Máy tính dạng bảng</title>
+</head>
+<body>
+<form>
+    <table border="1" cellpadding="18px"cellspacing="1px">
+<!--        <h2 id="display" ></h2>-->
+        <tr>
+            <td colspan="4" style="height: 20px"><p id="display"></p></td>
+        </tr>
+        <tr>
+            <td onclick="calculator(7)">7</td>
+            <td onclick="calculator(8)">8</td>
+            <td onclick="calculator(9)">9</td>
+            <td onclick="calculator('/')" class="color">/</td>
+        </tr>
+        <tr>
+            <td onclick="calculator(4)">4</td>
+            <td onclick="calculator(5)">5</td>
+            <td onclick="calculator(6)">6</td>
+            <td onclick="calculator('*')" class="color">*</td>
+        </tr>
+        <tr>
+            <td onclick="calculator(1)">1</td>
+            <td onclick="calculator(2)">2</td>
+            <td onclick="calculator(3)">3</td>
+            <td onclick="calculator('-')" class="color">-</td>
+        </tr>
+        <tr>
+            <td onclick="calculator(0)">0</td>
+            <td onclick="reset()"> c </td>
+            <td onclick="calculator('=')" class="color">=</td>
+            <td onclick="calculator('+')" class="color">+</td>
+        </tr>
+    </table>
+</form>
+</body>
+<script>
+    let number = '';
+    function calculator(operator) {
+        if (operator === '='){
+            document.getElementById('display').innerText = eval(number);
+        } else if
+        (number += operator) {
+            document.getElementById('display').innerText = number;
+        }
+    }
+    function reset() {
+        number = "";
+        document.getElementById("display").innerText = number;
+
+    }
+</script>
+</html>
