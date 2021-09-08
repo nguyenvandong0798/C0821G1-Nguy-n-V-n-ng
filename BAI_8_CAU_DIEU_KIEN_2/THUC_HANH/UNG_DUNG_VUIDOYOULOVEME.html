@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ỨNG DỤNG DO YOU LOVE ME</title>
+</head>
+<body>
+    <button onclick="a()"> yes </button>
+    <button id="move" style="position: relative" onmouseover="chay()"> no </button>
+</body>
+    <script>
+        function a() {
+            let a = alert("<3")
+        }
+        function chay(){
+            let x = Math.random()*window.innerHeight;
+            let y = Math.random()*window.innerWidth;
+            document.getElementById("move").style.left = x + 'px';
+            document.getElementById("move").style.top = y + 'px';
+        }
+
+    </script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MÁY TÍNH ĐƠN GIẢN</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #container > #result{
+        width: 200px;
+        height: 50px;
+    }
+    #container > input{
+        width:37px;
+        height:30px;
+        margin: 1px;
+    }
+</style>
+<body>
+<div id="container">
+    <input id="result" placeholder="hiển thị kết quả"/><br/>
+    <input type="button" value="1 " onclick="set(this.value)"/>
+    <input type="button" value="2 " onclick="set(this.value)"/>
+    <input type="button" value="3" onclick="set(this.value)"/>
+    <input type="button" value="+ " onclick="set(this.value)"/>
+    <input type="button" value="- " onclick="set(this.value)"/><br/>
+    <input type="button" value="4 " onclick="set(this.value)"/>
+    <input type="button" value="5 " onclick="set(this.value)"/>
+    <input type="button" value=" 6" onclick="set(this.value)"/>
+    <input type="button" value="x " onclick="set(this.value)"/>
+    <input type="button" value=" /" onclick="set(this.value)"/><br/>
+    <input type="button" value=" 7" onclick="set(this.value)"/>
+    <input type="button" value=" 8" onclick="set(this.value)"/>
+    <input type="button" value=" 9" onclick="set(this.value)"/>
+    <input type="button" value="=" onclick="ketqua()"/>
+    <input type="button" value="C" onclick="xoa()"/>
+</div>
+</body>
+    <script>
+        let x = "";
+        function a(id) {
+            return document.getElementById(id);
+        }
+        function set(num) {
+            x += num;
+            a('result').value = x;
+        }
+        function xoa() {
+            x = "";
+            a("result").value=x;
+        }
+        function ketqua() {
+            a("result").value=eval(a("result").value);
+        }
+    </script>
+</html>
