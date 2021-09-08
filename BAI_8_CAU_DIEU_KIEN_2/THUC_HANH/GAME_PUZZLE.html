@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GAME PUZZLE</title>
+</head>
+<body>
+    <img src="HINH/anh/green.jpg" id="a" onclick="changeImg1()" height="500" width="150"/>
+    <img src="HINH/anh/red.jpg" id="b" onclick="changeImg2()"height="500" width="150"/>
+    <img src="HINH/anh/oranger.png" id="c" onclick="changeImg3()"height="500" width="150"/>
+    <img src="HINH/anh/blue.jpg" id="d" onclick="changeImg4()"height="500" width="150"/>
+    <img src="HINH/anh/yellow.jpg" id="e" onclick="changeImg5()"height="500" width="150"/>
+</body>
+    <script>
+        function changeImg1() {
+            let img1 = document.getElementById("a").getAttribute("src");
+            if (img1 === "HINH/anh/green.jpg") {
+                document.getElementById("a").src = "HINH/anh/red.jpg";
+            }else if(img1 === "HINH/anh/red.jpg" ){
+                document.getElementById("a").src = "HINH/anh/oranger.png";
+            }else {
+                document.getElementById("a").src  = "HINH/anh/green.jpg"
+            }
+        }
+        function changeImg2() {
+            let img2 = document.getElementById("b").getAttribute("src");
+            if (img2 === "HINH/anh/red.jpg"){
+                document.getElementById("b").src = "HINH/anh/oranger.png"
+            }else if(img2 === "HINH/anh/oranger.png" ){
+                document.getElementById("b").src = "HINH/anh/green.jpg"
+            }else {
+                document.getElementById("b").src = "HINH/anh/red.jpg"
+            }
+        }
+        function changeImg3() {
+            let img3 = document.getElementById("c").getAttribute("src");
+            if (img3 === "HINH/anh/oranger.png"){
+                document.getElementById("c").src = "HINH/anh/green.jpg"
+            }else if(img3 === "HINH/anh/green.jpg" ){
+                document.getElementById("c").src = "HINH/anh/red.jpg"
+            }else {
+                document.getElementById("c").src = "HINH/anh/oranger.png"
+            }
+        }
+        function changeImg4() {
+            let img4 = document.getElementById("d").getAttribute("src");
+            if (img4 === "HINH/anh/red.jpg"){
+                document.getElementById("d").src = "HINH/anh/oranger.png"
+            }else if (img4 === "HINH/anh/oranger.png"){
+                document.getElementById("d").src = "HINH/anh/green.jpg"
+            }else {
+                document.getElementById("d").src = "HINH/anh/red.jpg"
+            }
+        }
+        function changeImg5() {
+            let img5 = document.getElementById("e").getAttribute("src");
+            if (img5 === "HINH/anh/oranger.png"){
+                document.getElementById("e").src = "HINH/anh/green.jpg"
+            }else if (img5 === "HINH/anh/green.jpg"){
+                document.getElementById("e").src = "HINH/anh/red.jpg"
+            }else
+                document.getElementById("e").src = "HINH/anh/oranger.png"
+        }
+        if ( == "HINH/anh/green.jpg")
+        {
+            alert("đã hoàn thành");
+        }
+
+    </script>
+</html>
