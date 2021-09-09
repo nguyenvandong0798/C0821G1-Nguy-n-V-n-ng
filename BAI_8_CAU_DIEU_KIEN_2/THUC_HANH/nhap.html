@@ -1,20 +1,117 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>[Bài tập] Ứng dụng vui DoYouLoveMe</title>
+    <title>[Bài tập] Game puzzle</title>
 </head>
 <body>
-<h1>Do you love me?</h1>
-<button onclick="agree()">YES</button>
-<button onmouseover="jump()" id="no">NO</button>
+<img src="HINH/anh/green.jpg" id="cell1" style="height: 500px; width: 200px" onclick="change1(1)"/>
+<img src="HINH/anh/oranger.png" id="cell2" style="height: 500px; width: 200px" onclick="change2(2)"/>
+<img src="HINH/anh/blue.jpg" id="cell3" style="height: 500px; width: 200px" onclick="change3(3)"/>
 
 <script>
-    function jump() {
-
-
+    function change1() {
+        let img1 = document.getElementById('cell1').getAttribute('src');
+        if (img1 === "HINH/anh/green.jpg") {
+            document.getElementById('cell1').src = "HINH/anh/oranger.png";
+        } else if (img1 === "HINH/anh/oranger.png") {
+            document.getElementById('cell1').src = "HINH/anh/blue.jpg";
+        } else {
+            document.getElementById('cell1').src = "HINH/anh/green.jpg";
+        }
     }
-</script>
-</body>
-</html>
+
+    function change2() {
+        let img2 = document.getElementById('cell2').getAttribute('src');
+        if (img2 === "HINH/anh/green.jpg") {
+            document.getElementById('cell2').src = "HINH/anh/oranger.png";
+        } else if (img2 === "HINH/anh/oranger.png") {
+            document.getElementById('cell2').src = "HINH/anh/blue.jpg";
+        } else {
+            document.getElementById('cell2').src = "HINH/anh/green.jpg";
+        }
+    }
+
+    function change3() {
+        let img3 = document.getElementById('cell3').getAttribute('src');
+        if (img3 === "HINH/anh/green.jpg") {
+            document.getElementById('cell3').src = "HINH/anh/oranger.png";
+        } else if (img3 === "HINH/anh/oranger.png") {
+            document.getElementById('cell3').src = "HINH/anh/blue.jpg";
+        } else {
+            document.getElementById('cell3').src = "HINH/anh/green.jpg";
+        }
+    }
+
+    // if (document.getElementById('cell1').getAttribute('src') === "HINH/anh/green.jpg" &&
+    //     document.getElementById('cell2').getAttribute('src') === "HINH/anh/green.jpg" &&
+    //     document.getElementById('cell3').getAttribute('src') === "HINH/anh/green.jpg") {
+    //     alert('Bạn đã ghép được màu xanh lá');
+    // } else if (document.getElementById('cell1').getAttribute('src') === "HINH/anh/blue.jpg" &&
+    //     document.getElementById('cell2').getAttribute('src') === "HINH/anh/blue.jpg" &&
+    //     document.getElementById('cell3').getAttribute('src') === "HINH/anh/blue.jpg") {
+    //     alert("Bạn đã ghép được màu xanh lam");
+    // } else if (document.getElementById('cell1').getAttribute('src') === "HINH/anh/oranger.png" &&
+    //     document.getElementById('cell2').getAttribute('src') === "HINH/anh/oranger.png" &&
+    //     document.getElementById('cell3').getAttribute('src') === "HINH/anh/oranger.png") {
+    //     alert("Bạn đã ghép được màu vàng chanh");
+    // }
+    //
+    // <!DOCTYPE html>
+    // <html lang="en">
+    //     <head>
+    //     <meta charset="UTF-8">
+    //     <title>[Bài tập] Game puzzle</title>
+    // </head>
+    // <body>
+    // <img src="xanhlacay.jpg" id="cell1" style="height: 500px; width: 200px" onclick="change1(1)"/>
+    //     <img src="mau-vang-chanh.jpg" id="cell2" style="height: 500px; width: 200px" onclick="change2(2)"/>
+    //     <img src="mau-xanh-lam.png" id="cell3" style="height: 500px; width: 200px" onclick="change3(3)"/>
+    //
+    //     <script>
+    //     function change1() {
+    //         let img1 = document.getElementById('cell1').getAttribute('src');
+    //         if (img1 === "xanhlacay.jpg") {
+    //             document.getElementById('cell1').src = "mau-vang-chanh.jpg";
+    //         } else if (img1 === "mau-vang-chanh.jpg") {
+    //             document.getElementById('cell1').src = "mau-xanh-lam.png";
+    //         } else {
+    //             document.getElementById('cell1').src = "xanhlacay.jpg";
+    //         }
+    //     }
+    //
+    // function change2() {
+    //     let img2 = document.getElementById('cell2').getAttribute('src');
+    //     if (img2 === "xanhlacay.jpg") {
+    //         document.getElementById('cell2').src = "mau-vang-chanh.jpg";
+    //     } else if (img2 === "mau-vang-chanh.jpg") {
+    //         document.getElementById('cell2').src = "mau-xanh-lam.png";
+    //     } else {
+    //         document.getElementById('cell2').src = "xanhlacay.jpg";
+    //     }
+    // }
+    //
+    // function change3() {
+    //     let img3 = document.getElementById('cell3').getAttribute('src');
+    //     if (img3 === "xanhlacay.jpg") {
+    //         document.getElementById('cell3').src = "mau-vang-chanh.jpg";
+    //     } else if (img3 === "mau-vang-chanh.jpg") {
+    //         document.getElementById('cell3').src = "mau-xanh-lam.png";
+    //     } else {
+    //         document.getElementById('cell3').src = "xanhlacay.jpg";
+    //     }
+    // }
+    //
+    // if (document.getElementById('cell1').getAttribute('src') === "xanhlacay.jpg" &&
+    //     document.getElementById('cell2').getAttribute('src') === "xanhlacay.jpg" &&
+    //     document.getElementById('cell3').getAttribute('src') === "xanhlacay.jpg") {
+    //     alert('Bạn đã ghép được màu xanh lá');
+    // } else if (document.getElementById('cell1').getAttribute('src') === "mau-xanh-lam.png" &&
+    //     document.getElementById('cell2').getAttribute('src') === "mau-xanh-lam.png" &&
+    //     document.getElementById('cell3').getAttribute('src') === "mau-xanh-lam.png") {
+    //     alert("Bạn đã ghép được màu xanh lam");
+    // } else if (document.getElementById('cell1').getAttribute('src') === "mau-vang-chanh.jpg" &&
+    //     document.getElementById('cell2').getAttribute('src') === "mau-vang-chanh.jpg" &&
+    //     document.getElementById('cell3').getAttribute('src') === "mau-vang-chanh.jpg") {
+    //     alert("Bạn đã ghép được màu vàng chanh");
+    // }
