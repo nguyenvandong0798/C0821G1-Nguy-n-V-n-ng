@@ -8,6 +8,7 @@
 <script>
     let numbers = parseInt(prompt("nhạp vào 1 số"));
     let check = true;
+    let kq = '';
     if (numbers < 2){
         check = false;
     }
@@ -15,13 +16,16 @@
         for (let i = 2; i < numbers; i++) {
             if (numbers % i === 0) {
                 check = false;
-            }
         }
+        }if (check){
+            kq += numbers +'<br>';
+            numbers++;
+        }document.write(kq);
     }
     if (check === false){
         alert('không là số nguyên tố')
     }else {
-     document.write(numbers + ' là số nguyên tố ')
+        alert('là số nguyên tố')
     }
 </script>
 </body>
