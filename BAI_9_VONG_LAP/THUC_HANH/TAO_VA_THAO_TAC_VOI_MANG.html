@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            padding-top: 50px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Tạo và thao tác với mãng</title>
+</head>
+<body>
+    <input type="text" id="textValue" >
+    <input type="button" id="addEl"onclick="addelemnet()" value="Add">
+    <input type="button" id="Display"onclick="displayelemnet()" value="Display">
+    <div id = 'result'></div>
+</body>
+</html>
+<script>
+    let x = 0;
+    let array = Array();
+    function addelemnet(){
+        array[x] = document.getElementById('textValue').value;
+        alert('Element:' + array[x] + 'Added at index' + x);
+        x++;
+        document.getElementById('textValue').value = '';
+    }
+    function displayelemnet(){
+        let e = '<hr/>';
+        for (let i = 0; i<array.length; i++){
+            e += 'Element' + i + '=' + array[i] + '<br>';
+        }
+        document.getElementById('result').innerHTML = e;
+    }
+</script>
