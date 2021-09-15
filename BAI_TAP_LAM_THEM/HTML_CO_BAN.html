@@ -2,19 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Từ điển </title>
 </head>
 <body>
-<form>
-    <label>Nhập tên: </label>
-    <input type="text" placeholder="Nhập tên của bạn" id="name">
-    <button type="submit" onclick="showMessage()">Xác nhận</button>
-</form>
-</body>
+<input type="text" id="s1"/>
+<input type="button" value="Dịch" onclick="trans()"/>
+<p id="result"></p>
 <script>
-    function showMessage() {
-        let name = document.getElementById('ten').value;
-        alert("XIn chào " + name)
+    let eng=["Hello","Sorry","Good","One","two","three"];
+    let vnm=["Xin chào","Xin lỗi","Tốt","Một","Hai","Ba"];
+
+    function trans(){
+        let a = document.getElementById("s1").value;
+        for(let i =0; i<eng.length;i++){
+            if (eng[i]=== a){
+                document.getElementById("result").innerHTML= vnm[i];
+            }
+        }
     }
 </script>
+</body>
 </html>

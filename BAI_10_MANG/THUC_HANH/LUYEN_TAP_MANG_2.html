@@ -9,72 +9,82 @@
 </body>
 </html>
 
-<!--Bài 1: Viết chương trình khởi tạo mảng 2 chiều, -->
+<!--Bài 1: Viết chương trình khởi tạo mảng 2 chiều,-->
 <!--gồm một bộ các phần tử có sẵn,  in ra các phần tử trong mảng-->
 <!--<script>-->
-<!--    let a = [-->
+<!--    let myArry = [-->
 <!--        [1, 2, 1, 24],-->
 <!--        [8, 11, 9, 4],-->
 <!--        [7, 0, 7, 27],-->
 <!--        [7, 4, 28, 14],-->
 <!--        [3, 10, 26, 7]-->
 <!--    ];-->
-<!--document.write(a[0][0] + '<br>' + a[0][1] + '<br>' + a[0][2] + '<br>' + a[0][3])-->
+<!--    for (let i = 0; i < myArry.length; i++){-->
+<!--        for (let j = 0; j < myArry[i].length; j++)-->
+<!--        {-->
+<!--            document.write(myArry[i][j]+ "<br>");-->
+<!--        }-->
+<!--    }-->
 <!--</script>-->
 
 <!--Bài 2: Viết một chương trình để in các ký tự trong một mảng -->
 <!--theo thứ tự đảo ngược-->
 <!--<script>-->
-<!--    let a =  [ 'c', 's', 'c', '2', '6', '1' ]-->
+<!--    let a =  [ 'c', 's', 'c', '2', '6', '1' ];-->
 <!--    for(let i = a.length-1; i >= 0; i&#45;&#45; ){-->
-<!--        document.write(a[i])-->
+<!--        document.write(a[i]);-->
 <!--    }-->
 <!--</script>-->
 
 <!--Bài 3:Chương trình này đếm số ký tự số trong mảng.-->
 <!--<script>-->
-<!--    let a = [1, 2, 1, 24]-->
-<!--    let count=''-->
+<!--    let a = [1, 2, 1, 24];-->
+<!--    let count='';-->
 <!--    for (let i = 0; i < a.length; i++){-->
-<!--        a[i] = i-->
+<!--        a[i] = i;-->
 <!--        count++-->
 <!--    }-->
-<!--    document.write(count)-->
+<!--    document.write(count);-->
 <!--</script>-->
 
 <!--Bài 4: Viết một chương trình để đếm số từ trong một chuỗi-->
 <!--<script>-->
 <!--    let a = 'codegym';-->
-<!--    let b = a.indexOf('g')-->
-<!--    document.write(b)-->
+<!--    let b = a.indexOf('g');-->
+<!--    document.write(b);-->
 <!--</script>-->
 
 <!--Bài 5: Viết một chương trình nhập vào 2 chuỗi, -->
 <!--sau đó kiểm tra xem hai chuỗi có giống nhau hay không.-->
 <!--<script>-->
-<!--    let a = prompt('Nhập vào chuỗi 1:')-->
-<!--    let b = prompt('Nhập vào chuỗi 2:')-->
-<!--    let check-->
+<!--    let a = prompt('Nhập vào chuỗi 1:');-->
+<!--    let b = prompt('Nhập vào chuỗi 2:');-->
+<!--    let check;-->
 <!--    if (a === b){-->
 <!--        check = true-->
 <!--    }-->
 <!--    if (check){-->
-<!--        alert('hai chuỗi trùng nhau')-->
+<!--        alert('hai chuỗi trùng nhau');-->
 <!--    }else {-->
-<!--        alert('hai chuỗi khác nhau')-->
+<!--        alert('hai chuỗi khác nhau');-->
 <!--    }-->
 
 <!--</script>-->
 
 
-<!--Bài 6: Viết chương trình nhập vào một mảng ký tự, -->
-<!--tìm tất cả các ký tự trong mảng là (-) và -->
+<!--Bài 6: Viết chương trình nhập vào một mảng ký tự,-->
+<!--tìm tất cả các ký tự trong mảng là (-) và-->
 <!--thay thế các ký tự này bởi ký tự ( _ )-->
 <!--<script>-->
-<!--    let a = ['code-dn','dong-dn']-->
-<!--    let c = a.toString(a)-->
-<!--     let b = ''-->
-<!--     if(a[i] === '-'){-->
-<!--           let b =c.replace('-','_')-->
-<!--            document.write(c)-->
+<!--    let a = prompt('Nhập vào mảng kí tự : ');-->
+<!--    let array = [];-->
+<!--    for (let i = 0 ; i < a.length; i ++){-->
+<!--        array[i]=a[i];-->
+<!--    }-->
+<!--    for ( let j = 0 ; j < array.length ; j ++) {-->
+<!--        if (array[j] === '-') {-->
+<!--            array.splice(j, 1, "_");-->
+<!--        }-->
+<!--    }-->
+<!--    alert(array.join(''));-->
 <!--</script>-->
