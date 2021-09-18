@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi meter sang Feet</title>
+</head>
+<body>
+<h4>-Chuyển đổi từ Feet sang meter-</h4>
+    <h3>Feet <input type="number" id="giatri"
+                    oninput="chuyendoi(this.value)"
+                    onchange="chuyendoi(this.value)"></h3>
+    <h3>Meters: <span id="giatri1"></span></h3>
+<h4>-Chuyển đổi từ meter sang feet-</h4>
+    <h3>Meter <input type="number" id="giatri2"
+                    oninput="chuyendoi2(this.value)"
+                    onchange="chuyendoi2(this.value)"></h3>
+    <h3>Feet: <p id="giatri3"></p></h3>
+
+</body>
+</html>
+    <script>
+        function chuyendoi(so) {
+            so = parseInt(so);
+            document.getElementById('giatri1').innerHTML= 3.279 * so;
+        }
+        function chuyendoi2(so) {
+            so = parseInt(so);
+            document.getElementById('giatri3').innerHTML=  0.305 * so;
+        }
+    </script>

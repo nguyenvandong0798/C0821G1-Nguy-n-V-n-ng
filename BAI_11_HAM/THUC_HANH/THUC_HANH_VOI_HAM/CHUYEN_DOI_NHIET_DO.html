@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<form>
+    <h1>Temperature Coverter</h1>
+    <h4>Type the value inthe Fahrenheit feld to convert the value to celcius</h4>
+    <h2>
+        <label>Fahrenheit</label>
+        <input id="Nhap"
+               type="number"
+               oninput="temperatureConvert(this.value)"
+               onchange="temperatureConvert(this.value)"></h2>
+
+
+    <h2> Celcius:<span id="temperatureC"></span></h2>
+</form>
+</body>
+</html>
+<script>
+    function temperatureConvert(num) {
+        num = parseFloat(num);
+        document.getElementById("temperatureC").innerHTML= (num-32) / 1.8;
+
+    }
+</script>
+
+

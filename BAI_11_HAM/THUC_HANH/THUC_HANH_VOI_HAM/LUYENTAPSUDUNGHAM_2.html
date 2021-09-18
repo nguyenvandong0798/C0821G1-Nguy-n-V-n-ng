@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập sử dụng hàm 2</title>
+</head>
+<body>
+<!--Bài 1: Viết hàm tính bình phương của một số -->
+<!--bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.-->
+<!--    <script>-->
+<!--        function binhPhuong(a) {-->
+<!--            return a * a-->
+<!--        }-->
+<!--        let b = binhPhuong(3);-->
+<!--        document.write(b + '<br>');-->
+<!--        let c = binhPhuong(4);-->
+<!--        document.write(c + '<br>');-->
+<!--        let d = binhPhuong(5);-->
+<!--        document.write(d);-->
+<!--    </script>-->
+
+<!--Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn.-->
+<!--Gọi hàm vừa xây dựng được-->
+<!--    <script>-->
+<!--        function dienTich(r) {-->
+<!--            return (r * r) * 3.14-->
+<!--        }-->
+<!--        let a = dienTich(5);-->
+<!--        document.write('Diện tích hình tròn là:'+  a + '<br>');-->
+<!--        function chuVi(d) {-->
+<!--            return d * 3.14-->
+<!--        }-->
+<!--        let b = parseInt(chuVi(5));-->
+<!--        document.write('chu vi hình tròn là:'+ b);-->
+<!--    </script>-->
+
+<!--Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào-->
+<!--    <script>-->
+<!--        function tra(n) {-->
+<!--            let giaiThua = 1;-->
+<!--            for (let i =1; i<= n; i++){-->
+<!--                giaiThua = giaiThua * i;-->
+<!--            }-->
+<!--            document.write('giai thừa của' + n +'='+ giaiThua).value-->
+<!--        }-->
+<!--        tra(prompt('nhạp vào 1 số :')).value-->
+<!--    </script>-->
+
+<!--Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. -->
+<!--Nếu là ký tự số hàm trả về true, ngược lại trả về false-->
+<!--<script>-->
+<!--    function tra(a) {-->
+<!--        if (a == isNaN){-->
+<!--            return false-->
+<!--        }else {-->
+<!--            return true-->
+<!--        }-->
+<!--    }-->
+<!--    let b = tra(2);-->
+<!--    document.write(b);-->
+<!--</script>-->
+
+<!--Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.-->
+<!--<script>-->
+<!--    function tra(a,b,c){-->
+<!--        if((a>b)&&(c>b)){-->
+<!--            return b;-->
+<!--        }else if ((c > a)&&(b>a)){-->
+<!--            return a;-->
+<!--        }else{-->
+<!--            return c;-->
+<!--        }-->
+<!--    }-->
+<!--    let gan = tra(6,2,3)-->
+<!--    document.write(gan)-->
+<!--</script>-->
+
+<!--Bài 6: Viết hàm nhận vào một số,
+ kiểm tra xem nếu số đưa vào có phải là nguyên dương không-->
+<!--<script>-->
+<!--    function tra(a) {-->
+<!--        if (a >0){-->
+<!--            return true-->
+<!--        }else {-->
+<!--            return false-->
+<!--        }-->
+<!--    }-->
+<!--    let b = tra(-4);-->
+<!--    document.write(b);-->
+<!--</script>-->
+
+<!--Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.-->
+<!--<script>-->
+<!--    function swap(x, y) {-->
+<!--        var t = x;-->
+<!--        x = y;-->
+<!--        y = t;-->
+<!--        return [x, y];-->
+<!--    }-->
+<!--   let a =  (swap(2, 3));-->
+<!--    document.write(a)-->
+<!--</script>-->
+
+<!--Bài 8: đảo vị trí trong mảng -->
+<!--    <script>-->
+<!--        let a =[1,2,3]-->
+<!--        function tra() {-->
+<!--           return a.reverse()-->
+<!--        }-->
+<!--        let b = tra()-->
+<!--        document.write(b)-->
+<!--    </script>-->
+
+<!--Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, -->
+<!--kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. -->
+<!--Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1-->
+<!--    <script>-->
+<!--        let arry =[];-->
+<!--        let count=0;-->
+<!--        let check;-->
+<!--        function loc(arry) {-->
+<!--            for (let i = 0; i <= 5; i++) {-->
+<!--                let b = prompt("nhập vào dãy số: " + i);-->
+<!--                arry[i] = b;-->
+<!--            }-->
+<!--            let c = prompt('nhâp số để lọc');-->
+<!--            for (j = 0; j <= 5; j++) {-->
+<!--                if (arry[j] == c) {-->
+<!--                    count += 1;-->
+<!--                    check = true;-->
+<!--                }-->
+<!--            }if (check = true){-->
+<!--                document.write(count);-->
+<!--            }else{-->
+<!--                document.write(-1)-->
+<!--            }-->
+<!--        }-->
+<!--        loc(arry);-->
+<!--    </script>-->
+
+
+</body>
+</html>
