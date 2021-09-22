@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi nhiệt độ</title>
+</head>
+<body>
+    <script>
+        class chuyendoitemperature {
+            constructor(doc) {
+                if (doc <= -274){
+                    this.doc = -274;
+                }else{
+                this.doc = doc;}
+            }
+
+            chuyensangdof() {
+                document.write('Nhiệt độ F' + ' = '+ 9/5 * this.doc + 32  );
+            }
+
+            chuyensangkevin() {
+                document.write('Nhiệt độ k' + ' = '+ this.doc / 273,15  )
+            }
+        }
+        let nhietdof = new chuyendoitemperature(25);
+        nhietdof.chuyensangdof();
+        document.write('<br>');
+        nhietdof.chuyensangkevin();
+    </script>
+</body>
+</html>

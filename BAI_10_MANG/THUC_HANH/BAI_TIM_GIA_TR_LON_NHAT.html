@@ -5,19 +5,27 @@
     <title>Tìm một giá trị lớn nhất</title>
 </head>
 <body>
-<script>
-    // let number = [-3,5,1,3,2,10];
-    // document.write(number);
-    // let max = number[0];
-    // let index = 0;
-    // for (let i= 1; i < number.length; i++){
-    //     if (number[i] > max) {
-    //         max = number[i];
-    //     }
-    // }
-    // alert('số lớn nhất là:' + max);
+<!--<script>-->
+<!--    let number = [-3,5,1,3,2,10];-->
+<!--    let max = number[0];-->
+<!--    let index = 0;-->
+<!--    for (let i= 1; i < number.length; i++){-->
+<!--        if (number[i] > max) {-->
+<!--            max = number[i];-->
+<!--        }-->
+<!--    }-->
+<!--    alert('số lớn nhất là:' + max);-->
 
-</script>
+<!--</script>-->
 </body>
 </html>
-
+<script>
+    let number = [-3,5,1,3,2,10];
+    let max = number[0];
+    for(let i = 1; i< number.length; i++){
+        if(number[i]> max){
+            max = number[i];
+        }
+    }
+    document.write(max);
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+    <script>
+        class DienThoai{
+            constructor() {
+                this.Pin = 100;
+                this.guitn = [];
+                this.nhantn = [];
+                this.trangthai = true;
+                }checkTrangThai() {
+                    if (this.trangthai) {
+                        let check = confirm('bạn có muốn tắt điện thoại không');
+                        if(check){
+                            alert('điện thoại của bạn sẽ tắt')
+                        }else{
+                            this.trangthai = true;
+                        }
+                    }
+                }
+            // guiTinnhan(noiDung, iphone) {
+                //     this.guitn.push(noiDung);
+                //     iphone.nhanTinnhan(noiDung);
+                //     this.Pin--;
+                // }
+                //
+                // nhanTinnhan(noidung) {
+                //     this.nhantn.push(noidung);
+                //     this.Pin--;
+                // }
+            // }checkPin(){
+                //     if (this.Pin === 0 ){
+                //         alert('sac Pin');
+                //     }
+                // }
+
+        }
+        let chay = new DienThoai();
+        chay.checkTrangThai()
+        // let pin = new DienThoai();
+        // pin.checkPin();
+        // let iphone = new DienThoai();
+        // let samsung = new DienThoai();
+        // samsung.guiTinnhan("hello", iphone);
+        // document.write("Tin đã gửi: " + samsung.guitn);
+        // document.write('<br>');
+        // document.write("Tin Đã nhận: " + iphone.nhantn);
+        // document.write('<br>');
+        // document.write("Lượng Pin: " + samsung.Pin);
+    </script>
+</body>
+</html>

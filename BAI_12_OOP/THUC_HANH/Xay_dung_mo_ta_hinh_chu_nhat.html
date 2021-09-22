@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng mô tả hình chữ nhật</title>
+</head>
+<body>
+    <script>
+        class rectangle{
+            constructor(width, height) {
+                this.width = width;
+                this.height = height;
+            }dienTich(){
+                document.write('diện tích hình chữ nhật là:' + (this.width + this.height) * 2 );
+            }chuVi(){
+                document.write('chu vi hình chữ nhật là:' + this.width  * this.height );
+            }getWidth(){
+                return this.width;
+            }getHeight(){
+                return this.height;
+            }setWidth(width){
+                this.width = width;
+            }setHeight(height){
+                this.height = height;
+            }
+        }
+        let tinh = new rectangle(10,20);
+        // tinh.dienTich();
+        tinh.setHeight(10);
+        tinh.setWidth(5);
+        tinh.dienTich();
+        document.write('<br>');
+        tinh.setHeight(10);
+        tinh.setWidth(5);
+        tinh.chuVi();
+    </script>
+</body>
+</html>

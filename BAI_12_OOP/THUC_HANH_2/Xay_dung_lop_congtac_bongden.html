@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xây dựng bóng dèn và công tắt</title>
+</head>
+<body>
+<script>
+    class ElectricLamp{
+        constructor() {
+            this.trangthaiden=false;
+        }
+
+        gettrangthai() {
+            return this.trangthaiden;
+        }
+        checktrangthai() {
+            if (this.trangthaiden===false){
+                console.log("Đèn đang tắt");
+            }else {
+                console.log("Đèn đang bật")
+            };
+        }
+        settrangthai(check){
+            if(check===true){
+                this.trangthaiden=true;
+            }else {
+                this.trangthaiden=false;
+            }
+        }
+    }
+    class SwitchButton{
+        constructor() {
+            this.trangthaiButton=false;
+            this.lamp=new ElectricLamp();
+        }
+
+        gettrangthai() {
+            return this.trangthaiButton;
+        }
+
+        getLamp() {
+            return this.lamp.gettrangthai();
+        }
+        conectToLamp(){
+            return this.trangthaiButton
+
+        }
+        switchOn(){
+            if(this.trangthaiButton===false){
+                let check = confirm("Bạn có muốn bật đèn không?");
+                if(check){
+                    this.trangthaiButton=true;
+                }else {
+                    alert("Công tắc đang tắt")
+                }
+            }
+        }
+        switchOff(){
+            if(this.trangthaiButton===true){
+                let check = confirm("Bạn có muốn tắt đèn không?");
+                if(check){
+                    this.trangthaiButton=false;
+                }else {
+                    alert("Công tắc đang bật")
+                }
+            }
+        }
+    }
+    let switchButton=new SwitchButton();
+    let lamp=new ElectricLamp();
+
+    switchButton.switchOn();
+    let check=switchButton.conectToLamp();
+    lamp.settrangthai(check);
+    document.write("Trạng thái đèn khi open "+lamp.gettrangthai());
+    document.write('<br>');
+    document.write("Trạng thái công tắc khi open "+switchButton.gettrangthai());
+    document.write('<br>');
+    lamp.checktrangthai();
+    switchButton.switchOff();
+    check=switchButton.conectToLamp();
+    lamp.settrangthai(check);
+    document.write("Trạng thái bóng đèn "+lamp.gettrangthai());
+    document.write('<br>');
+    document.write("Trạng thái công tắc "+switchButton.gettrangthai());
+    lamp.settrangthai();
+</script>
+</body>
+</html>

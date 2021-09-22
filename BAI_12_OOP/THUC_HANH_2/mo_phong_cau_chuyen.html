@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adam & eva</title>
+</head>
+<body>
+    <script>
+        class Apple{
+            constructor() {
+                this.weight = 10;
+            }
+            decrease(){
+                this.weight--;
+            }
+            test(){
+                this.weight--;
+                document.write('Khối lượng của quả táo chỉ còn là: '+this.weight)
+            }
+        }
+        class Human{
+            constructor(name,gender,weight) {
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+            }
+            say(){
+                let a = prompt('Nhập từ cần nói');
+                console.log(a);
+            }
+            eat(){
+                this.weight++;
+                document.write('Táo đã bị ăn 1dv tu '+this.name +'</br>'+ ' Cân nặng của ' + this.name +' bây giờ là '+this.weight)
+            }
+            ojbect(){
+                document.write('Tên: '+this.name+'</br>'+' Giới tính: '+ this.gender + '</br>'+' Cân nặng: '+ this.weight)
+            }
+        }
+        let human = new Human('Dong','Male',50);
+        let apple = new Apple();
+        human.ojbect();
+        document.write('<br>');
+        human.say();
+        human.eat();
+        document.write('<br>');
+        apple.test();
+    </script>
+</body>
+</html>
