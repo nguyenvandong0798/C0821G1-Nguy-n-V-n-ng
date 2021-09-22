@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+    <script>
+        do {
+            let choose = parseInt(prompt('nhập số món mà bạn cần uống: '+ '\n'+
+                '1. Caffe '+ '\n' +
+                '2. Cam vắt '+ '\n' +
+                '3. Nước ép cà rốt '+ '\n' +
+                '4. Nước ép cà chua '+ '\n' +
+                '5. Nước lọc '+ '\n' +
+                '6. Nước dừa '+ '\n' +
+                '7. Thoát '+ '\n'));
+
+            switch (choose) {
+                case 1: let gia1 = prompt('đơn giá món này là 10k');
+                    alert('bạn cần thanh toán số tiền là:' + gia1 * 10000);
+                case 2: let gia2 = prompt('đơn giá món này là 30k');
+                    alert('bạn cần thanh toán số tiền là:' + gia2 * 30000);
+                case 3: let gia3 = prompt('đơn giá món này là 15k');
+                    alert('bạn cần thanh toán số tiền là:' + gia3 * 15000);
+                case 4: let gia4 = prompt('đơn giá món này là 15k');
+                    alert('bạn cần thanh toán số tiền là:' + gia4 * 15000);
+                case 5: let gia5 = prompt('đơn giá món này là 5k');
+                    alert('bạn cần thanh toán số tiền là:' + gia5 * 5000);
+                case 6: let gia6 = prompt('đơn giá món này là 30k');
+                    alert('bạn cần thanh toán số tiền là:' + gia6 * 30000);
+                case 7: alert("thoát khỏi hệ thống")
+            }
+        }
+        while (choose)
+    </script>
+</body>
+</html>

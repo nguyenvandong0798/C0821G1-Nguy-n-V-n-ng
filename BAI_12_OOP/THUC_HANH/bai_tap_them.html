@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập thêm tìm vị trí lớn thứ n trong mảng </title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("nhập vào độ dài của mảng"));
+        let myArry = new Array(a);
+        for (let i = 0; i < myArry.length; i++){
+            myArry[i] = prompt('nhập giá trị của phần tử:'+ i+1);
+        }
+        myArry = myArry.sort(function (a,b) {
+            return b-a;
+        });
+        for (let i = 0; i < myArry.length; i++){
+            for (let j= i + 1; j < myArry.length; j++){
+                if (myArry[i]===myArry[j]){
+                    myArry.splice(j,1);
+                }
+            }
+        }
+        let n = parseInt(prompt('nhập vị trí số lớn thứ n'));
+        if(n > myArry.length){
+            document.write('-1');
+        }else{
+            document.write('số vị trí lớn:'+ n + "có giá trị là :" + myArry[n-1])
+        }
+    </script>
+</body>
+</html>

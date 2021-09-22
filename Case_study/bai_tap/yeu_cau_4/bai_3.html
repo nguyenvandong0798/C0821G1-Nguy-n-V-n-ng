@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+    <script>
+        let s1 = "aabcc";
+        let s2 = "adcaa";
+        let c = [];
+        let a = s1.split('');
+        let b = s2.split('');
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < b.length; j++) {
+                if (a[i] === b[j]) {
+                    c.push(a[i]);
+                    a.splice(i,1);
+                    b.splice(j,1);
+                    j--;
+                }
+            }
+        }
+        document.write(c)
+    </script>
+</body>
+</html>

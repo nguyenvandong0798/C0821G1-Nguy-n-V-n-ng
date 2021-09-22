@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1 </title>
+</head>
+<body>
+    <script>
+        let thuNhap = prompt("nhập lương chưa thuế");
+        let luong = '';
+        let thue = '';
+        if (thuNhap > 15){
+            thue = 20 *thuNhap/100;
+            luong = thuNhap - thue;
+        }else if (thuNhap < 7){
+            thue = 5 *thuNhap/100;
+            luong = thuNhap - thue;
+        }else {
+            thue = 10 *thuNhap/100;
+            luong = thuNhap - thue;
+        }
+        document.write('tiền thu nhập: ' + luong + ' thue ' + thue);
+    </script>
+</body>
+</html>

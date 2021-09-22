@@ -7,33 +7,55 @@
 <body>
 <input type="text" id="nhap">
 <input type="button" id1="tra" value="tra từ" onclick="traTudien()"/>
-<script>
-    let a = ['one', 'two', 'three']
-    let b = ['một', 'hai', 'ba']
-    let c;
-    let d ='khong khop'
-    function traTudien()
-    {
-        let check;
-        let nhap = document.getElementById('nhap').value;
-        for (let i = 0; i <= a.length - 1; i++)
-        {
-            if (a[i] == nhap)
-            {
-                c = a.indexOf(nhap);
-                check = true;
-                break;
-            }
+<!--<script>-->
+<!--    let a = ['one', 'two', 'three']-->
+<!--    let b = ['một', 'hai', 'ba']-->
+<!--    let c;-->
+<!--    let d ='khong khop'-->
+<!--    function traTudien()-->
+<!--    {-->
+<!--        let check;-->
+<!--        let nhap = document.getElementById('nhap').value;-->
+<!--        for (let i = 0; i <= a.length - 1; i++)-->
+<!--        {-->
+<!--            if (a[i] == nhap)-->
+<!--            {-->
+<!--                c = a.indexOf(nhap);-->
+<!--                check = true;-->
+<!--                break;-->
+<!--            }-->
+<!--        }-->
+<!--        if (check)-->
+<!--        {-->
+<!--            document.write(b[c]);-->
+<!--        }-->
+<!--        else-->
+<!--        {-->
+<!--            alert(d)-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+    <script>
+       let a = ['one', 'two', 'three'];
+       let b = ['một', 'hai', 'ba'];
+       let c;
+       let d='không khớp';
+       let check;
+        function traTudien(){
+            let nhap = document.getElementById('nhap').value;
+           for (let i = 0; i <= a.length; i++){
+                   if (a[i] == nhap){
+                       c = a.indexOf(nhap);
+                       check = true;
+                       break;
+                   }
+           }if (check){
+                document.write(b[c]);
+           }else {
+               alert(d);
+           }
         }
-        if (check)
-        {
-            document.write(b[c]);
-        }
-        else
-        {
-            alert(d)
-        }
-    }
-</script>
+    </script>
 </body>
 </html>
