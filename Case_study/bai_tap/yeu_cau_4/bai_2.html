@@ -5,13 +5,22 @@
     <title>tìm ký tự khác nhau</title>
 </head>
 <body>
-    <script>
-        let s = "cabca";
-        let a;
-        for (let i = 0; i < s.length;i++){
-            a= s.includes();
-            document.write(a)
-        }
-    </script>
+
 </body>
 </html>
+<script>
+    let myArry = prompt('nhập vào 1 mảng');
+            myArry=myArry.split('');
+    // myArry = myArry.sort(function (a,b) {
+    //     return a-b;
+    // });
+    for (let i = 0; i < myArry.length; i++){
+        for (let j= i + 1; j < myArry.length; j++){
+            if (myArry[i]===myArry[j]){
+                myArry.splice(j,1);
+                j--
+            }
+        }
+    }
+    document.write(myArry.length)
+</script>

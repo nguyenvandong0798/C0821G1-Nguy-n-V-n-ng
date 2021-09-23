@@ -6,65 +6,109 @@
 </head>
 <body>
     <script>
-        let Battery = function () {
-
-            this.setEnergy = function (energy) {
-                this.energy = energy;
-            };
-
-            this.getEnergy = function () {
-                return this.energy;
-            };
-
-            this.decreaseEnergy = function () {
-                if (this.energy > 0) {
-                    this.energy--;
-                }
-            }
-        };
-        let FlashLamp = function () {
-
-            this.setBattery = function (battery) {
-                this.battery = battery;
-            };
-
-            this.getBatteryInfo = function () {
-                return this.battery.getEnergy();
-            };
-
-            this.light = function () {
-                if(this.status){
-                    alert("Lighting");
-                } else {
-                    alert("Not lighting");
-                }
-            };
-            this.turnOn = function () {
-                this.status = true;
-            };
-
-            this.turnOff = function () {
-                this.status = false;
-            }
-        };
-        let battery = new Battery();
-        battery.setEnergy(10);
-
-        let flashLamp = new FlashLamp();
-        flashLamp.setBattery(battery);
-
-        document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
-        flashLamp.light();
-
-        document.write("Turn on<br/>")
-        flashLamp.turnOn();
-        flashLamp.light();
-        document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
-
-        document.write("Turn off<br/>")
-        flashLamp.turnOff();
-        flashLamp.light();
+        // let Battery = function () {
+        //
+        //     this.setEnergy = function (energy) {
+        //         this.energy = energy;
+        //     };
+        //
+        //     this.getEnergy = function () {
+        //         return this.energy;
+        //     };
+        //
+        //     this.decreaseEnergy = function () {
+        //         if (this.energy > 0) {
+        //             this.energy--;
+        //         }
+        //     }
+        // };
+        // let FlashLamp = function () {
+        //
+        //     this.setBattery = function (battery) {
+        //         this.battery = battery;
+        //     };
+        //
+        //     this.getBatteryInfo = function () {
+        //         return this.battery.getEnergy();
+        //     };
+        //
+        //     this.light = function () {
+        //         if(this.status){
+        //             alert("Lighting");
+        //         } else {
+        //             alert("Not lighting");
+        //         }
+        //     };
+        //     this.turnOn = function () {
+        //         this.status = true;
+        //     };
+        //
+        //     this.turnOff = function () {
+        //         this.status = false;
+        //     }
+        // };
+        // let battery = new Battery();
+        // battery.setEnergy(10);
+        //
+        // let flashLamp = new FlashLamp();
+        // flashLamp.setBattery(battery);
+        //
+        // document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+        // flashLamp.light();
+        //
+        // document.write("Turn on<br/>")
+        // flashLamp.turnOn();
+        // flashLamp.light();
+        // document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+        //
+        // document.write("Turn off<br/>")
+        // flashLamp.turnOff();
+        // flashLamp.light();
     </script>
 
 </body>
 </html>
+    <script>
+        class BongDen {
+            constructor() {
+                this.status = false;
+            }
+
+            turnOn() {
+                    this.status = true;
+                    console.log('Bóng đèn đang bậc');
+            }
+            turnOff() {
+                    this.status = true;
+                    console.log('Bóng đèn đang tắc');
+            }
+
+        }
+        class SwitchButton {
+            constructor(lamp) {
+                this.status = false;
+                this.Electriclamp = lamp;
+            }
+            SwitchOn (){
+                if (this.status = true){
+                    this.Electriclamp.turnOn();
+                    console.log('Công tắc đang bậc');
+                }else{
+                    console.log('Công tắc đang tắc');
+                }
+            }
+            SwitchOff (){
+                if (this.status = true){
+                    this.Electriclamp.turnOff();
+                    console.log('Công tắc đang tắc');
+                }else{
+                    console.log('Công tắc đang bậc');
+                }
+            }
+        }
+        let neon = new BongDen();
+        let contac = new SwitchButton(neon);
+        contac.SwitchOn();
+        contac.SwitchOff();
+
+    </script>
