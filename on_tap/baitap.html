@@ -27,33 +27,20 @@
     //     }
     //     document.write('<br>')
     // }
-    let arr =[1,2,3];
-    let arrnew = [];
-    function maxMinAvg(arr) {
-        let max = arr[0];
-        let min = arr[0];
-        let avg = 0;
-        let sum = 0;
-        for (let i = 1; i <= arr.length-1; i++){
-            if(arr[i]>max){
-                max=arr[i];
-                arrnew.push(max);
+
+
+    for (let i = 0; i < 6; i++){
+        for (let j =1; j < 10; j++){
+            if (i===0 || i===5){
+                document.write("*")
+            }else{
+                if (j===1 || j===9){
+                    document.write("*")
+                }else{
+                    document.write("&nbsp&nbsp")
+                }
             }
         }
-        // for (let i = 1; i < arr.length; i++){
-        //     if(arr[i]<min){
-        //         arr[i]==min;
-        //         arrnew.push(arr[i]);
-        //     }
-        // }
-        // for (let i = 0; i < arr.length; i++){
-        //     sum = sum + arr[i];
-        //     avg = sum / arr.length;
-        //     arrnew.push(avg);
-        // }
-        // // return arrnew;
+        document.write('<br>');
     }
-    max = maxMinAvg(arr);
-    console.log(arrnew);
-
 </script>

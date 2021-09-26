@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>từ điển</title>
+</head>
+<body>
+    <input id="nhap" type="text">
+    <input type="button" id="xuat" value="Submit" onclick="search()">
+</body>
+</html>
+<script>
+    let a = ['one', 'two', 'three'];
+    let b = ['một', 'hai', 'ba'];
+    let c;
+    let check;
+    function search() {
+        let nhap1 = document.getElementById('nhap').value;
+        for (let i = 0; i < a.length; i++){
+            if (nhap1 == a[i]){
+                c = a.indexOf(nhap1);
+                check =true;
+                break;
+            }
+        }if (check){
+            alert(b[c]);
+        }else{
+            alert("not value");
+        }
+    }
+</script>

@@ -5,18 +5,38 @@
     <title>Title</title>
 </head>
 <body>
-<script>
-    let arr = [-3,3,5,7];
-    function findMax(arr) {
-        var max = arr[0];
-        //Your code here
-        return max;
-    }for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > arr[0]) {
-            max = arr[i];
-        }
-    }
-    console.log(max);
-</script>
+<!--<script>-->
+<!--    let arr = [-3,3,5,7];-->
+<!--    function findMax(arr) {-->
+<!--        var max = arr[0];-->
+<!--        //Your code here-->
+<!--        return max;-->
+<!--    }for (let i = 0; i < arr.length; i++) {-->
+<!--        if (arr[i] > arr[0]) {-->
+<!--            max = arr[i];-->
+<!--        }-->
+<!--    }-->
+<!--    console.log(max);-->
+<!--</script>-->
 </body>
 </html>
+<script>
+    let rowArr = parseInt(prompt("Input a row:"))
+    let colArr = parseInt(prompt("Input a rol:"))
+
+    let arr2d = new Array(rowArr);
+    for (let row = 0; row < arr2d.length; row++){
+        arr2d[row] = new Array[colArr];
+
+        for (let col = 0; col < arr2d[row].length; col++){
+            let value = prompt("input a value ["+row +"] ["+col +"]:");
+            arr2d[row][col] = value;
+        }
+    }
+    for (let row = 0; row < arr2d.length; row++){
+        for (let col = 0 ; col < arr2d[row].length; col++){
+            document.write(arr2d[row][col] + " ");
+        }
+        document.write('<br>');
+    }
+</script>

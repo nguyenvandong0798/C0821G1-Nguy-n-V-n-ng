@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lap trinh huong doi tuong</title>
+</head>
+<body>
+    <script>
+        class Xe{
+            constructor() {
+                this.Trangthai = false;
+            }
+            getTrangThaiOn (){
+                this.Trangthai = true;
+                console.log("xe đã được khởi động");
+            }
+            getTrangThaiOff (){
+                this.Trangthai = true;
+                console.log("xe đã được tắt máy");
+            }
+        }
+        class ChongTrom{
+            constructor (keu){
+                this.Trangthai = false;
+                this.coi = keu
+            }
+            getTrangThaiOpen(keu){
+                if (this.Trangthai = true){
+                    this.coi.getTrangThaiOn ();
+                    console.log("chống trộm đã báo động")
+                }else{
+                    console.log("chống trộm đã tắt báo động")
+                }
+            }
+
+        }
+        let honda = new Xe();
+        let chongTrom1 = new ChongTrom(honda);
+        chongTrom1.getTrangThaiOpen();
+    </script>
+</body>
+</html>

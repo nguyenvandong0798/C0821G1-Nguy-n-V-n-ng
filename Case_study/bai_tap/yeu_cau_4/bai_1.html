@@ -6,7 +6,24 @@
 </head>
 <body>
     <script>
-
+        let str = "nGuyen   vaN donG";
+        let myArry= [];
+        function changeString(str) {
+            let newarry = str.toLowerCase();
+            myArry = newarry.split(" ");
+            for (let i = 0; i < myArry.length-1; i++) {
+                if (myArry[i] === "") {
+                    myArry.splice(i, 1);
+                    i--;
+                }
+            }for (let j = 0; j < myArry.length; j++) {
+                myArry[j] = myArry[j].split("");
+                myArry[j][0] = myArry[j][0].toUpperCase();
+            }
+        }
+        myArry = myArry.join();
+        changeString(str);
+        console.log(myArry);
     </script>
 </body>
 </html>
