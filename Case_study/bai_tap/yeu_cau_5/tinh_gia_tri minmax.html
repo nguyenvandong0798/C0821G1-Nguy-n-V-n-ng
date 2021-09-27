@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tim min max</title>
 </head>
 <body>
+    <script>
+        let arr = [];
+        let array = [[2,5,1,8,13], [10,15,5,9,20]];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j <array[i].length ; j++) {
+                arr.push(array[i][j]);
+            }
+        }
 
+        function check(arr) {
+            let max = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+            max = check(arr);
+            alert(max);
+
+        function check1(arr) {
+            let min = arr[0];
+            for(let i = 1; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+        max = check(arr);
+        alert(max);
+        min = check1(arr);
+        alert(min);
+    </script>
 </body>
 </html>
