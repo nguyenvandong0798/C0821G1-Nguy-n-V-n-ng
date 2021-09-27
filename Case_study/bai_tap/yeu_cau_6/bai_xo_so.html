@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 6</title>
+</head>
+<body>
+<label for="num1">Số 1: <input id="num1" type="number"></label><br>
+<label for="num2">Số 2: <input id="num2" type="number"></label><br>
+<label for="num3">Số 3: <input id="num3" type="number"></label><br>
+<label for="num4">Số 4: <input id="num4" type="number"></label><br>
+<label for="num5">Số 5: <input id="num5" type="number"></label><br>
+<label for="num6">Số 6: <input id="num6" type="number"></label><br>
+<button onclick="muave()">Mua vé</button>
+<button onclick="result()">Xem kết quả</button>
+<script>
+    let chosse;
+    let num1;
+    let num2;
+    let num3;
+    let num4;
+    let num5;
+    let num6;
+    do {
+        chosse = parseInt(prompt("Bạn có 2 lựa chọn: " +"\n" +"1. Bạn tự chọn số " + "\n"+"2. Hệ thống tự chọn random"));
+    }while (chosse!==1&&chosse!==2);
+    if(chosse==1){
+        alert("Bạn hãy nhập số vào từng ô")
+    } else {
+        num1=Math.round(Math.random()*99);
+        num2=Math.round(Math.random()*99);
+        num3=Math.round(Math.random()*99);
+        num4=Math.round(Math.random()*99);
+        num5=Math.round(Math.random()*99);
+        num6=Math.round(Math.random()*99);
+        document.getElementById('num1').value=num1;
+        document.getElementById('num2').value=num2;
+        document.getElementById('num3').value=num3;
+        document.getElementById('num4').value=num4;
+        document.getElementById('num5').value=num5;
+        document.getElementById('num6').value=num6;
+    }
+
+    class Ticket{
+        constructor(num1,num2,num3,num4,num5,num6) {
+            this.num1 = num1;
+            this.num2 = num2;
+            this.num3 = num3;
+            this.num4 = num4;
+            this.num5 = num5;
+            this.num6 = num6;
+        }
+
+        getNum1() {
+            return this.num1;
+        }
+
+        setNum1(value) {
+            this.num1 = value;
+        }
+
+        getNum2() {
+            return this.num2;
+        }
+
+        setNum2(value) {
+            this.num2 = value;
+        }
+
+        getNum3() {
+            return this.num3;
+        }
+
+        setNum3(value) {
+            this.num3 = value;
+        }
+
+        getNum4() {
+            return this.num4;
+        }
+
+        setNum4(value) {
+            this.num4 = value;
+        }
+
+        getNum5() {
+            return this.num5;
+        }
+
+        setNum5(value) {
+            this.num5 = value;
+        }
+
+        getNum6() {
+            return this.num6;
+        }
+
+        setNum6(value) {
+            this.num6 = value;
+        }
+    }
+</script>
+</body>
+</html>
