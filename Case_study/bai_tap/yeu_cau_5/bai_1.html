@@ -6,8 +6,8 @@
 </head>
 <body>
     <script>
-        let rowArr = parseInt(prompt("Input a row:"))
-        let colArr = parseInt(prompt("Input col:"))
+        let rowArr = parseInt(prompt("Input a row:"));
+        let colArr = parseInt(prompt("Input col:"));
 
         let arr2d = new Array(rowArr);
         for (let row = 0; row < arr2d.length; row++){
@@ -18,15 +18,21 @@
                 arr2d[row][col] = value;
             }
         }
-        let sum = 0;
         for (let row = 0; row < arr2d.length; row++){
             for (let col = 0 ; col < arr2d[row].length; col++){
-                if (arr2d[row][col] % 2 == 0){
-                    sum = sum + arr2d[row][col];
+                document.write(arr2d[row][col] + " ");
+            }
+            document.write("<br>");
+        }
+        let sum = 0;
+        for (let i = 0; i < arr2d.length; i++){
+            for (let j = 0; j < arr2d.length; j++){
+                if (arr2d[i][j] %2 === 0){
+                    sum += arr2d[i][j];
+                    document.write(sum);
                 }
             }
         }
-        document.write(sum);
     </script>
 </body>
 </html>

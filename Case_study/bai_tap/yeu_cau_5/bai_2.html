@@ -6,36 +6,32 @@
 </head>
 <body>
 <script>
-    let rowArr = parseInt(prompt("Input a row:"))
-    let colArr = parseInt(prompt("Input col:"))
-
-    let arr2d = new Array(rowArr);
-    for (let row = 0; row < arr2d.length; row++){
-        arr2d[row] = new Array(colArr);
-
-        for (let col = 0; col < arr2d[row].length; col++){
-            let value = prompt("input a value ["+row +"] ["+col +"]:");
-            arr2d[row][col] = value;
+    let arr = [];
+    let array = [[2,5,6,8,13], [10,15,5,9,20]];
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j <array[i].length ; j++) {
+            if (phanTu(array[i][j])){
+            }
         }
     }
-    let a =[];
-    let check;
-
-    for (let row = 0; row < arr2d.length; row++){
-        for (let col = 0 ; col < arr2d[row].length; col++){
-            if (arr2d[row][col] < 2 ){
+    function phanTu(n) {
+        let check = true;
+        if (n <= 1) {
+            check = false;
+        }
+        for (let i = 2; i < n ; i++) {
+            if (n % i === 0) {
                 check = false;
-            }
-            else if (arr2d[row][col] % 2 == 0){
-                check = false;
-            }else{
+                break;
+            }else {
                 check = true;
-                a.push(arr2d[row][col]);
             }
-        }if (check =true){
-            document.write(a);
+        }
+        if(check === true){
+            arr.push(n);
         }
     }
+    document.write("số nguyên tố là: " + arr.length);
 </script>
 </body>
 </html>
