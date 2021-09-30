@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>de 3 </title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    table {
+        width: 80%;
+    }
+</style>
+<h2 align="center">Quản lý Khai Báo Sổ Tiết Kiệm</h2>
+<hr width="1500Px"; height="10">
+
+<label>Mã sổ: </label><input type="text" id="Ma">
+<label>Loại tiết kiệm: </label><input type="text" id="Loai">
+<label>Họ tên khách hàng: </label><input type="text" id="Ten">
+<label>Chứng minh nhân dân: </label><input type="text" id="Cmnd">
+<label>Ngày mở sổ: </label><input type="text" id="Nms">
+<label>Số tiền gửi: </label><input type="text" id="Stg">
+<button onclick="addSoTietKiem()">Add</button>
+<div id="table"></div>
+
+</body>
+<script>
+    class SoTietKiem {
+        constructor(maso,loai, ten, cmnd, ngay, tien) {
+            this.maSo = maso;
+            this.loai = loai;
+            this.ten = ten;
+            this.cmnd = cmnd;
+            this.ngayMo = ngay;
+            this.tienGui = tien;
+        }
+
+
+        getMaSo() {
+            return this.maSo;
+        }
+
+        setMaSo(value) {
+            this.maSo = value;
+        }
+
+        getLoai() {
+            return this.loai;
+        }
+
+        setLoai(value) {
+            this.loai = value;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        setTen(value) {
+            this.ten = value;
+        }
+        getCmnd() {
+            return this.cmnd;
+        }
+
+        setCmnd(value) {
+            this.cmnd = value;
+        }
+        getngayMo() {
+            return this.ngayMo;
+        }
+
+        setngayMo(value) {
+            this.ngayMo = value;
+        }
+        gettienGui() {
+            return this.tienGui;
+        }
+
+        settienGui(value) {
+            this.tienGui = value;
+        }
+
+
+    }
+
+    let soTietKiem1 = new SoTietKiem(2020, "loaitk1", "Nguyen Van Dong",206122760,"11/01/20",20000);
+    let soTietKiem2 = new SoTietKiem(2019, "loaitk2", "Nguyen Van Minh",206122860,"11/05/20",30000);
+    let soTietKiem3 = new SoTietKiem(2021, "loaitk3", "Nguyen Van Tin",206122560,"11/06/21",50000);
+
+    let soTietKiem = [soTietKiem1, soTietKiem2, soTietKiem3];
+
+
+    function addSoTietKiem() {
+        let soTietKiemMa = document.getElementById('Ma').value;
+        let soTietKiemLoai = document.getElementById('Loai').value;
+        let soTietKiemTen = document.getElementById('Ten').value;
+        let soTietKiemCmnd = document.getElementById('Cmnd').value;
+        let soTietKiemNgay = document.getElementById('Nms').value;
+        let soTietKiemStg = document.getElementById('Stg').value;
+        if (soTietKiemMa !== "" || soTietKiemLoai !== "" || soTietKiemTen !== "" ||
+            soTietKiemCmnd !== "" || soTietKiemNgay !== "" || soTietKiemStg !== "") {
+            let stk = new SoTietKiem(soTietKiemMa, soTietKiemLoai, soTietKiemTen,
+                soTietKiemCmnd, soTietKiemNgay, soTietKiemStg);
+            soTietKiem.push(stk);
+            document.getElementById('Ma').value = "";
+            document.getElementById('Loai').value = "";
+            document.getElementById('Ten').value = "";
+            document.getElementById('Cmnd').value = "";
+            document.getElementById('Nms').value = "";
+            document.getElementById('Stg').value = "";
+            displaySoTietKiem();
+        }
+    }
+
+    function editSoTietKiem(index) {
+        soTietKiem[index].ten = prompt("Nhập tên người cần sửa: ");
+        displaySoTietKiem();
+    }
+
+    function deleteSoTietKiem(index) {
+        let check = confirm("Bạn có muốn xóa stk " + soTietKiem[index] + " Không?");
+        if (check) {
+            soTietKiem.splice(index, 1);
+            displaySoTietKiem();
+        }
+    }
+
+    function displaySoTietKiem() {
+        let table = "<table cellspacing='5' border='1px'  >" +
+            "<tr><th> Mã sổ</th>" +
+            "<th> Loại sổ</th>" +
+            "<th> Tên sổ</th>" +
+            "<th> CMND</th>" +
+            "<th> Ngày mở</th>" +
+            "<th> Số tiền gửi</th></tr>";
+
+        for (let i = 0; i < soTietKiem.length; i++) {
+            table += "<tr>" +
+                "<td>" + soTietKiem[i].getMaSo() + "</td>" +
+                "<td>" + soTietKiem[i].getLoai() + "</td>" +
+                "<td>" + soTietKiem[i].getTen() + "</td>" +
+                "<td>" + soTietKiem[i].getCmnd() + "</td>" +
+                "<td>" + soTietKiem[i].getngayMo() + "</td>" +
+                "<td>" + soTietKiem[i].gettienGui() + "</td>" +
+                "<td><button onclick='editSoTietKiem(" + i + ")'>Edit</button>" + "</td>" +
+                "<td><button onclick='deleteSoTietKiem(" + i + ")'>Delete</button>" + "</td>" +
+                "</tr>";
+        }
+        table += "</table>";
+        document.getElementById('table').innerHTML = table;
+    }
+
+    displaySoTietKiem();
+
+
+</script>
+</html>
+
+</body>
+</html>

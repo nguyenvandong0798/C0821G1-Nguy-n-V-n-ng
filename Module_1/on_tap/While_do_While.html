@@ -9,11 +9,14 @@
     let n = parseInt(prompt("enter a number:"));
     while(n > 20){
         n = parseInt(prompt("enter a number < 20:"));
-        let array = new Array(n);
-        for(let i = 0; i < array.length; i++){
-            document.write(array[i]);
-        }
     }
+    let array = new Array(n);
+    for(let i = 0; i < array.length; i++){
+        let value  = parseInt(prompt("enter a value [" + i + "]:"));
+        array[i] = value;
+    }
+    console.log(array);
+
 </script>
 </body>
 </html>

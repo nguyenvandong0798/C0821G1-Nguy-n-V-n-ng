@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> de 1</title>
+</head>
+<body>
+    <script>
+        let c = [];
+        let n = parseInt(prompt("enter a number:"));
+        while(n >= 50){
+            n = parseInt(prompt("enter a number <= 50:"));
+        }
+        let a = new Array(n);
+        for(let i = 0; i < a.length; i++){
+            let value  = parseInt(prompt("enter a value [" + i + "]:"));
+            a[i] = value;
+        }
+        // console.log(a);
+        for (let i =0; i < a.length; i++){
+            if (phanTu(a[i])){
+            }
+        }
+        function phanTu(n) {
+            let check = true;
+            if (n <= 1) {
+                check = false;
+            }
+            for (let i = 2; i < n ; i++) {
+                if (n % i === 0) {
+                    check = false;
+                    break;
+                }else {
+                    check = true;
+                }
+            }
+            if(check === true){
+                c.push(n);
+            }
+        }
+        document.write(c);
+    </script>
+
+</body>
+</html>

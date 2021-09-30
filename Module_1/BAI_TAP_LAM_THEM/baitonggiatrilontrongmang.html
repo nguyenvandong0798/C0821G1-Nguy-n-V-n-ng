@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+        <html lang="en">
+            <head>
+            <meta charset="UTF-8">
+            <title>Title</title>
+            </head>
+            <body>
+            <script>
+            let array = [-2, -5, 6, -2, -3, 1, 5, -6];
+            let max = array [0];
+            for (let i = 0; i < array.length; i++) {
+            for (let j = i; j < array.length; j++) {
+                let sum = 0;
+                for (let k = i; k <= j; k++) {
+                    sum += array[k];
+                }
+                max = maxSum(max, sum);
+            }
+        }
+        function maxSum(best, sum) {
+            if (best > sum) {
+                return best;
+            } else {
+                return sum;
+            }
+        }
+        alert(max);
+    </script>
+</body>
+</html>
